@@ -11,7 +11,7 @@ function AllTasks() {
     useEffect(()=>{
         const fetchedTasks = async () =>{
             try {
-                const response = await axios('http://localhost:8000')
+                const response = await axios('https://task-manager-backend-8z2t.onrender.com')
                 setTasks(response.data.data)
                 console.log(response.data.data);
             } catch (error) {
@@ -41,7 +41,7 @@ function AllTasks() {
                                 to={`/deleteTask/${task._id}`}
                                 className='text-red-600'
                                 onClick={async () => {
-                                    await axios.delete(`http://localhost:8000/deleteTask/${task._id}`)
+                                    await axios.delete(`https://task-manager-backend-8z2t.onrender.com/deleteTask/${task._id}`)
                                     // alert("post deleted successfully")
                                     navigate('/')
                                 }}
