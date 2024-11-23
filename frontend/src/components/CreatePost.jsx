@@ -16,7 +16,7 @@ function CreatePost() {
             return;
         }
         try {
-            const response = await axios.post('http://localhost:8000/addTasks', {taskData});
+            const response = await axios.post('https://task-manager-backend-8z2t.onrender.com/addTasks', {taskData});
             alert(response.data.message);
             setTaskData('');
             navigate('/')
