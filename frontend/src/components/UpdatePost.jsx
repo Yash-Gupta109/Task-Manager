@@ -17,7 +17,7 @@ function UpdatePost() {
             return;
         }
         try {
-            const response = await axios.put(`http://localhost:8000/updateTask/${id}`, {taskData})
+            const response = await axios.put(`https://task-manager-backend-8z2t.onrender.com/updateTask/${id}`, {taskData})
             alert(response.data.message);
             navigate('/'); 
         } catch (error) {
